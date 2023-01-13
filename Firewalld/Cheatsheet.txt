@@ -1,0 +1,34 @@
+# Firewalld provides different levels of security for different connection zones. A zone is associated with at least one network interface
+
+# Get All Zones
+# sudo firewall-cmd --get-zones
+
+<#
+block
+dmz
+drop
+external
+home
+internal
+libvirt
+public
+trusted
+work
+#>
+
+# List services associated across with a specific zones
+# sudo firewall-cmd --zone=public --list-all
+# sudo firewall-cmd --zone=external --list-all
+
+
+# Add a service
+# sudo firewall-cmd --permanent --zone=public --add-service=vnc-server
+
+# Remove a service
+# sudo firewall-cmd --permanent --zone=public --remove-service=vnc-server
+
+# Add a Port
+# sudo firewall-cmd --permanent --zone=public --add-port=5666/tcp
+
+# Reload firewalld configuration
+# sudp firewall-cmd --reload
