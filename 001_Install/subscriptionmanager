@@ -1,0 +1,29 @@
+# Subscription Manager
+## Documentation
+- [Red Hat](https://access.redhat.com/solutions/253273)
+
+## Register a system
+Use the following command to register the system, then automatically associate any available subscription matching that system:
+```
+sudo subscription-manager register --username <username> --password <password> --auto-attach
+```
+
+## Insights Client
+```
+sudo insights-client --register
+sudo subscription-manager refresh
+```
+
+## Automatically start redhat package manager
+```
+sudo systemctl enable rhcd
+sudo systemctl start rhcd
+sudo systemctl status rhcd
+```
+
+## Un-registering a system
+```
+# sudo subscription-manager remove --all
+# sudo subscription-manager unregister
+# sudo subscription-manager clean
+```
