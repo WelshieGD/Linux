@@ -11,6 +11,7 @@ sudo subscription-manager register --username <username> --password <password> -
 ## Insights Client
 ```
 sudo insights-client --register
+sudo insights-client --checkin
 sudo subscription-manager refresh
 ```
 
